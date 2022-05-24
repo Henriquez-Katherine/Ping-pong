@@ -113,16 +113,16 @@ class Ball():
         # Move Ball and Ball's rect
         
         for i in data:
-            if self.rect.colliderect(Rect(i.x, i.y + i.h, i.w, 5)):
+            if self.rect.colliderect(pygame.Rect(i.x, i.y + i.h, i.w, 5)):
                 self.speed_y *= -1
                 bup.play()
-            if self.rect.colliderect(Rect(i.x, i.y - 2, i.w, 3)):
+            if self.rect.colliderect(pygame.Rect(i.x, i.y - 2, i.w, 3)):
                 self.speed_y *= -1
                 bup.play()
-            if self.rect.colliderect(Rect(i.x + i.w, i.y, 5, i.h)):
+            if self.rect.colliderect(pygame.Rect(i.x + i.w, i.y, 5, i.h)):
                 self.speed_x *= -1
                 bup.play()
-            if self.rect.colliderect(Rect(i.x - 2, i.y, 3, i.h)):
+            if self.rect.colliderect(pygame.Rect(i.x - 2, i.y, 3, i.h)):
                 self.speed_x *= -1
                 bup.play()
         # Here we check collisions (with Player or Bot)
